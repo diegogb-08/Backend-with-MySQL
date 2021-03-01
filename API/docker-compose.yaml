@@ -1,0 +1,31 @@
+version: '2'
+services:      
+  mysql:
+        container_name: mysql
+        image: mysql
+        restart: always
+        ports:
+            - 3306:3306
+        environment:
+            MYSQL_DATABASE: 'clase'
+            MYSQL_USER: 'user'
+            MYSQL_PASSWORD: 'password'
+            MYSQL_ROOT_PASSWORD: 'password'
+        expose:
+        - '3306'
+   
+  phpmyadmin:
+        image: phpmyadmin
+        depends_on:
+            - "mysql"
+        links:
+            - "mysql"
+        ports:
+            - 8080:80  
+        environment: 
+            PMA_HOST: 'mysql'
+            PMA_USER: 'root'
+            PMA_PASSWORD: 'password'
+
+
+
