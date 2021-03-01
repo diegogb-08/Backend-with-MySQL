@@ -12,13 +12,16 @@ module.exports = {
         type: Sequelize.STRING
       },
       email: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        primaryKey: true,
       },
-      phone - number: {
-        type: Sequelize.NUMBER
+      phoneNumber: {
+        type: Sequelize.INTEGER,
+        primaryKey: true,
       },
       dni: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        primaryKey: true,
       },
       pathologies: {
         type: Sequelize.STRING

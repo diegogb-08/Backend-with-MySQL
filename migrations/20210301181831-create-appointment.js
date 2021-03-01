@@ -12,13 +12,16 @@ module.exports = {
         type: Sequelize.DATE
       },
       price: {
-        type: Sequelize.NUMBER
+        type: Sequelize.INTEGER,
+        defaultValue: 35
       },
       duration: {
-        type: Sequelize.DATE
+        type: Sequelize.STRING,
+        defaultValue: "30 min"
       },
       covid: {
-        type: Sequelize.BOOLEAN
+        type: Sequelize.BOOLEAN,
+        defaultValue: false
       },
       createdAt: {
         allowNull: false,

@@ -17,14 +17,8 @@ module.exports = (sequelize, DataTypes) => {
     time: DataTypes.DATE,
     date: DataTypes.DATE,
     price: DataTypes.NUMBER,
-    duration: {
-      type: DataTypes.STRING,
-      defaultValue: "30 min"
-    },
-    covid: {
-      type: DataTypes.BOOLEAN,
-      defaultValue: false
-    }
+    duration: DataTypes.STRING,
+    covid: DataTypes.BOOLEAN
   }, {
     sequelize,
     modelName: 'Appointment',

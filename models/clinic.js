@@ -14,18 +14,9 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Clinic.init({
-    name: {
-      type: DataTypes.STRING,
-      primaryKey: true
-    },
-    email: {
-      type: DataTypes.STRING,
-      primaryKey: true
-    },
-    phoneNumber: {
-      type: DataTypes.NUMBER,
-      primaryKey: true
-    },
+    name: DataTypes.STRING,
+    email: DataTypes.STRING,
+    phoneNumber: DataTypes.NUMBER
   }, {
     sequelize,
     modelName: 'Clinic',
